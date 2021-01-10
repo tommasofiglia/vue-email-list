@@ -12,8 +12,7 @@
     <div id="app">
 
       <div class="squares_container">
-        <div v-for="(square, index) in 36" class="square">
-
+        <div v-for="(square, index) in 36" class="square" @click="numberOnClick(index)">
         </div>
       </div>
 
