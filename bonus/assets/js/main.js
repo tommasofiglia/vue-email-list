@@ -9,6 +9,7 @@ let app = new Vue({
   data:{
     randomNumber: "",
     position: "",
+    squares: []
   },
   methods: {
     //Funzione che, al click sul quadrato, assegna il valore numerico relativo alla posizione del quadrato all'oggetto position.
@@ -23,8 +24,14 @@ let app = new Vue({
       this.randomNumber = (number.data.response);
       console.log(this.randomNumber);
       alert('Il numero generato è ' +  this.randomNumber);
+
       });
 
     }
+  },
+
+  created() {
+    this.squares.length = 36;
+    console.log(this.squares.length);
   }
 });
